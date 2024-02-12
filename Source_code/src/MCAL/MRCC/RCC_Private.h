@@ -38,6 +38,10 @@
 #define RCC_HSI_DIV_2                          1
 #define RCC_HSE_DIV_2                          2
 #define RCC_HSE_NO_DIV                         3
+/**                PLL SOURCE                 **/
+#define RCC_PLL_INPUT_HSI                      0
+#define RCC_PLL_INPUT_HSE                      1
+#define RCC_PLL_SOURCE                         22
 
 /**              PLL INPUT MULT FACTOR       **/
 #define RCC_PLL_MULT_FACTOR_2                  2
@@ -76,6 +80,7 @@
 #define RCC_HSI_SYSTEM_CLOCK_MASK              0X00000000
 #define RCC_HSE_SYSTEM_CLOCK_MASK              0X00000001
 #define RCC_PLL_SYSTEM_CLOCK_MASK              0X00000002
+#define RCC_SYSTEM_CLOCK_MASK                  0XFFFFFFFC
 
 #define RCC_SYSTEM_CLK_MASK                    0X0000000C
 
@@ -130,6 +135,22 @@
 #define RCC_APB2_TIM9       0x00010000
 #define RCC_APB2_TIM10      0x00020000
 #define RCC_APB2_TIM11      0x00040000
+
+/* These macros should used with MRCC_SelectPLLPFactor function */
+#define RCC_PLLP_2         0x00000000
+#define RCC_PLLP_4         0x00010000
+#define RCC_PLLP_6         0x00020000
+#define RCC_PLLP_8         0x00030000
+#define RCC_PLLP_MASK      0XFFFCFFFF
+/* These macros should used with MRCC_SelectPLLMFactor function */
+#define RCC_PLLM_MIN       0x00000002
+#define RCC_PLLM_MAX       0x0000003F
+#define RCC_PLLM_MASK      0XFFFFFFC0
+/* These macros should used with MRCC_SelectPLLNFactor function */
+#define RCC_PLLN_MIN       0x00003000
+#define RCC_PLLN_MAX       0x00006C00
+#define RCC_PLLN_MASK      0XFFFF803F
+
 
 
 

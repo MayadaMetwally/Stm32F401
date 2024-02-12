@@ -63,8 +63,16 @@ tenu_ErrorStatus MRCC_CheckPLLStatus(u8 *Status);
 tenu_ErrorStatus MRCC_SelectSystemClock(u8 SystemClock);
 /******************************Function to Get System Clock****************************************/
 tenu_ErrorStatus MRCC_GetSystemClock(u8 *SystemClock);
-/******************************Function to PLL INPUT Clock****************************************/
+/******************************Function to Get PLL INPUT Clock****************************************/
 tenu_ErrorStatus MRCC_GetPLLInputClock(u8 *PLLInputClock);
+/******************************Function to Select PLL INPUT Clock****************************************/
+tenu_ErrorStatus MRCC_SelectPLLInputClock(u8 PLLInputClock);
+/******************************Function to Select P factor for PLL****************************************/
+tenu_ErrorStatus MRCC_SelectPLLPFactor(u32 PLLPFactor);
+/******************************Function to Select M factor for PLL****************************************/
+tenu_ErrorStatus MRCC_SelectPLLMFactor(u32 PLLMFactor);
+/******************************Function to Select N factor for PLL****************************************/
+tenu_ErrorStatus MRCC_SelectPLLNFactor(u32 PLLNFactor);
 
 
 #endif /* MCAL_RCC_H_ */
