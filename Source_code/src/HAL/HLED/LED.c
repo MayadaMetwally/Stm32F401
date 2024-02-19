@@ -55,7 +55,7 @@ tenu_ErrorStatus HLED_GetStatus(u32 Copy_Led, u8 *ADD_status)
 	}
 	else
 	{
-		Local_ErrorStatus=MGPIO_GetPin(LEDS[Copy_Led].Port,LEDS[Copy_Led].Pin,&Local_status);
+		Local_ErrorStatus=MGPIO_GetPinState(LEDS[Copy_Led].Port,LEDS[Copy_Led].Pin,&Local_status);
 		*ADD_status=Local_status^LEDS[Copy_Led].Connection;
 	}
 
