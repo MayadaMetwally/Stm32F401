@@ -30,7 +30,7 @@ tenu_ErrorStatus MGPIO_InitPin(GPIO_Pin_tstr* ADD_PinCfg)
 
 		Local_Temp=((GPIO_Reg*)ADD_PinCfg->Port)->OTYPER;
 		Local_Temp&=~(1<<ADD_PinCfg->Pin);
-		Local_Temp|=((GPIO_OTYPE_MASK&ADD_PinCfg->Mode)<<(ADD_PinCfg->Pin-GPIO_PIN_OFFSET_2));
+		Local_Temp|=(((GPIO_OTYPE_MASK&ADD_PinCfg->Mode)>>GPIO_PIN_OFFSET_2)<<(ADD_PinCfg->Pin));
 		((GPIO_Reg*)ADD_PinCfg->Port)->OTYPER=Local_Temp;
 
 		Local_Temp=(((GPIO_Reg*)ADD_PinCfg->Port))->PUPDR;
@@ -77,10 +77,10 @@ tenu_ErrorStatus MGPIO_SetPin(void* Copy_Port, u8 Copy_Pin, u8 Copy_State)
 	return Local_ErrorStatus;
 }
 /************************************Function get the Pin state************************************/
-tenu_ErrorStatus MGPIO_GetPin(void* Copy_Port, u8 Copy_Pin, u8 * ADD_State)
+tenu_ErrorStatus MGPIO_GetPinState(void* Copy_Port, u8 Copy_Pin, u8 * ADD_State)
 {
 	tenu_ErrorStatus Local_ErrorStatus=LBTY_OK;
-	if (*ADD_State==NULL || Copy_Pin>GPIO_PIN_15 || Copy_Port==NULL)
+	if (ADD_State==NULL || Copy_Pin>GPIO_PIN_15 || Copy_Port==NULL)
 		{
 			Local_ErrorStatus=LBTY_NOK;
 		}

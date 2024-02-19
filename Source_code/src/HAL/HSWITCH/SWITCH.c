@@ -36,7 +36,7 @@ tenu_ErrorStatus HSWITCH_GetSwitchStatus(u8 Copy_SwitchName, u8 *ADD_SwitchStatu
 	{
 		Local_ErrorStatus=LBTY_NOK;
 	}
-	Local_ErrorStatus=MGPIO_GetPin(SWITCH[Copy_SwitchName].PORT,SWITCH[Copy_SwitchName].PIN,&Local_Status);
+	Local_ErrorStatus=MGPIO_GetPinState(SWITCH[Copy_SwitchName].PORT,SWITCH[Copy_SwitchName].PIN,&Local_Status);
 	*ADD_SwitchStatus=!(Local_Status^(SWITCH[Copy_SwitchName].MODE>>SWITCH_OFFSET_4));
 
 	return Local_ErrorStatus;

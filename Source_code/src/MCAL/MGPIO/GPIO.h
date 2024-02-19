@@ -7,6 +7,7 @@
  *************************            Author   : Mayada Metwally                     ************************
  *************************    Brief: This header file defines  functions for GPIO driver*********************.
  ************************************************************************************************************/
+
 #include "GPIO_Reg.h"
 #include"GPIO_Private.h"
 
@@ -121,7 +122,7 @@ tenu_ErrorStatus MGPIO_SetPin(void* Copy_Port, u8 Copy_Pin, u8 Copy_State);
  * @return tenu_ErrorStatus
  * * @note	 : The function returns an error if a Wrong Choice or NULL pointer  is provided as the configuration .
  */
-tenu_ErrorStatus MGPIO_GetPin(void* Copy_Port, u8 Copy_Pin, u8 * ADD_State);
+tenu_ErrorStatus MGPIO_GetPinState(void* Copy_Port, u8 Copy_Pin, u8 * ADD_State);
 
 
 
