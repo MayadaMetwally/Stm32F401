@@ -1,18 +1,19 @@
-#include "../LIB/STD_TYPES.h"
-#include "../MCAL/MRCC/RCC.h"
-#include "../MCAL/MGPIO/GPIO.h"
-#include "../HAL/HLED/LED.h"
-#include "../HAL/HSWITCH/SWITCH.h"
+#include "STD_TYPES.h"
+#include "MRCC/RCC.h"
+#include "MGPIO/GPIO.h"
+#include "HLED/LED.h"
+#include "HSWITCH/SWITCH.h"
 
 
 int main()
 {
+MRCC_ControlClockAHP1Peripheral(RCC_AHB1_GPIOA,RCC_ENABLE);
 HLED_Init();
 HSWITCH_Init();
 
 u8 Local_var=0;
 
-MRCC_ControlClockAHP1Peripheral(RCC_AHB1_GPIOA,RCC_ENABLE);
+
 
   // Infinite loop
   while (1)

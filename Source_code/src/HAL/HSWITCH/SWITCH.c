@@ -8,9 +8,9 @@
  *************************    Brief: This source file implements functions for LED driver********************.
  ************************************************************************************************************/
 
-#include "../../LIB/STD_TYPES.h"
-#include "SWITCH.h"
-#include "../../MCAL/MGPIO/GPIO.h"
+#include "STD_TYPES.h"
+#include "HSWITCH/SWITCH.h"
+#include "MGPIO/GPIO.h"
 extern const SWITCH_tstr SWITCH[_NUM_SWITCH];
 tenu_ErrorStatus HSWITCH_Init(void)
 {
