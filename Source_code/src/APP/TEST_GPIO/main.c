@@ -1,8 +1,8 @@
-#include "../LIB/STD_TYPES.h"
-#include "../MCAL/MRCC/RCC.h"
-#include "../MCAL/MGPIO/GPIO.h"
-#include "../HAL/HLED/LED.h"
-#include "../HAL/HSWITCH/SWITCH.h"
+#include "STD_TYPES.h"
+#include "MRCC/RCC.h"
+#include "MGPIO/GPIO.h"
+#include "HLED/LED.h"
+#include "HSWITCH/SWITCH.h"
 
 
 int main()

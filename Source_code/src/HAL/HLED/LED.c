@@ -8,9 +8,9 @@
  *************************    Brief: This source file implements functions for LED driver********************.
  ************************************************************************************************************/
 
-#include "../../LIB/STD_TYPES.h"
-#include "LED.h"
-#include "../../MCAL/MGPIO/GPIO.h"
+#include "STD_TYPES.h"
+#include "HLED/LED.h"
+#include "MGPIO/GPIO.h"
 
 extern  const LEDSCfg_tstr LEDS[_LED_NUM];
 tenu_ErrorStatus HLED_Init(void)
@@ -38,7 +38,7 @@ tenu_ErrorStatus HLED_SetStatus(u32 Copy_Led, u8 Copy_status)
 	}
 	else
 	{
-		MGPIO_SetPin(LEDS[Copy_Led].Port,LEDS[Copy_Led].Pin,LEDS[Copy_Led].Connection^Copy_status);
+		MGPIO_SetPin(LEDS[Copy_Led].Port,LEDS[Copy_Led].Pin,(LEDS[Copy_Led].Connection)^Copy_status);
 	}
 
 	return Local_ErrorStatus;

@@ -7,10 +7,10 @@
  *************************            Author   : Mayada Metwally                       ************************
  *************************    Brief: This source file implements functions for GPIO driver*********************.
  **************************************************************************************************************/
-#include "../../LIB/STD_TYPES.h"
-#include "GPIO_Private.h"
-#include "GPIO_Reg.h"
-#include "GPIO.h"
+#include "STD_TYPES.h"
+#include "MGPIO/GPIO_Private.h"
+#include "MGPIO/GPIO_Reg.h"
+#include "MGPIO/GPIO.h"
 
 /************************************Function Initializes the Pin************************************/
 tenu_ErrorStatus MGPIO_InitPin(GPIO_Pin_tstr* ADD_PinCfg)

@@ -8,13 +8,13 @@
  *************************    Brief: This source file implements functions for RCC driver**********************.
  **************************************************************************************************************/
 
-#include "../../LIB/STD_TYPES.h"
-#include "../../LIB/Bit_Math.h"
+#include "STD_TYPES.h"
 
-#include "RCC_Reg.h"
-#include "RCC_Private.h"
-#include "RCC_Cfg.h"
-#include "RCC.h"
+
+#include "MRCC/RCC_Reg.h"
+#include "MRCC/RCC_Private.h"
+#include "MRCC/RCC_Cfg.h"
+#include "MRCC/RCC.h"
 
 /**************************************Enable peripheral clk***********************************************/
 tenu_ErrorStatus MRCC_EnablePeripheralClock(u8 BusId,u8 PerId)

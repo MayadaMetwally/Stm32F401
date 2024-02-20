@@ -1,7 +1,7 @@
-#include "../LIB/STD_TYPES.h"
-#include "../MCAL/MRCC/RCC_Private.h"
-#include "../MCAL/MRCC/RCC_Reg.h"
-#include "../MCAL/MRCC/RCC.h"
+#include "STD_TYPES.h"
+#include "MRCC/RCC_Private.h"
+#include "MRCC/RCC_Reg.h"
+#include "MRCC/RCC.h"
 
 
 int main()

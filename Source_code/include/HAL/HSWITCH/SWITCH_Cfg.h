@@ -5,15 +5,24 @@
  *************************            Version  : V 0.0                                ************************
  *************************            Created  : 2/16/2023                            ************************
  *************************            Author   : Mayada Metwally                      ************************
- **************Brief: This Source file defines the user configuration externs for switch driver***************.
+ **************Brief: This Header file defines the user configuration externs for switch driver***************.
  ************************************************************************************************************/
-#include "STD_TYPES.h"
-#include "HSWITCH/SWITCH.h"
-#include "MGPIO/GPIO.h"
-const SWITCH_tstr SWITCH[_NUM_SWITCH]={
-		[SWITCH_01]={.PORT=GPIOB,.PIN=GPIO_PIN_13,.MODE=GPIO_MODE_IN_PU},
-		[SWITCH_02]={.PORT=GPIOB,.PIN=GPIO_PIN_14,.MODE=GPIO_MODE_IN_PU},
-		[SWITCH_03]={.PORT=GPIOB,.PIN=GPIO_PIN_15,.MODE=GPIO_MODE_IN_PU},
 
-};
 
+
+#ifndef HAL_HSWITCH_SWITCH_CFG_H_
+#define HAL_HSWITCH_SWITCH_CFG_H_
+
+typedef enum
+{
+	SWITCH_01=0,
+	SWITCH_02=1,
+	SWITCH_03=2,
+
+	_NUM_SWITCH
+
+}SWITCHES_tenu;
+
+
+
+#endif /* HAL_HSWITCH_SWITCH_CFG_H_ */
