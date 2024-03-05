@@ -34,6 +34,10 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src/APP \
+src/HAL/HLED \
+src/HAL/HSWITCH \
+src/MCAL/MGPIO \
+src/MCAL/MNVIC \
 src/MCAL/MRCC \
 system/src/cmsis \
 system/src/cortexm \
