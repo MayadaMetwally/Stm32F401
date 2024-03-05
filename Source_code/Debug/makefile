@@ -14,6 +14,10 @@ RM := rm -rf
 -include system/src/cortexm/subdir.mk
 -include system/src/cmsis/subdir.mk
 -include src/MCAL/MRCC/subdir.mk
+-include src/MCAL/MNVIC/subdir.mk
+-include src/MCAL/MGPIO/subdir.mk
+-include src/HAL/HSWITCH/subdir.mk
+-include src/HAL/HLED/subdir.mk
 -include src/APP/subdir.mk
 -include subdir.mk
 -include objects.mk

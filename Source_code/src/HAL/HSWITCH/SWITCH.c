@@ -11,10 +11,13 @@
 #include "STD_TYPES.h"
 #include "HSWITCH/SWITCH.h"
 #include "MGPIO/GPIO.h"
+#include "MRCC/RCC.h"
 extern const SWITCH_tstr SWITCH[_NUM_SWITCH];
 tenu_ErrorStatus HSWITCH_Init(void)
 {
 	tenu_ErrorStatus Local_ErrorStatus=LBTY_OK;
+	MRCC_ControlClockAHP1Peripheral(RCC_AHB1_GPIOB,RCC_ENABLE);
+	MRCC_ControlClockAHP1Peripheral(RCC_AHB1_GPIOA,RCC_ENABLE);
 	GPIO_Pin_tstr Switch_Pin;
 	Switch_Pin.Speed=GPIO_SPEED_HIGH;
 	for(u8 idk=0;idk<_NUM_SWITCH;idk++)

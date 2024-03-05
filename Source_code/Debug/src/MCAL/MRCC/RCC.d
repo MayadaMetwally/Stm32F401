@@ -1,17 +1,22 @@
 src/MCAL/MRCC/RCC.o: ../src/MCAL/MRCC/RCC.c \
- ../src/MCAL/MRCC/../../LIB/STD_TYPES.h \
- ../src/MCAL/MRCC/../../LIB/Bit_Math.h ../src/MCAL/MRCC/RCC_Reg.h \
- ../src/MCAL/MRCC/RCC_Private.h ../src/MCAL/MRCC/RCC_Cfg.h \
- ../src/MCAL/MRCC/RCC.h
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\LIB/STD_TYPES.h \
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Reg.h \
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Private.h \
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Cfg.h \
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC.h \
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Private.h \
+ E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Reg.h
 
-../src/MCAL/MRCC/../../LIB/STD_TYPES.h:
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\LIB/STD_TYPES.h:
 
-../src/MCAL/MRCC/../../LIB/Bit_Math.h:
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Reg.h:
 
-../src/MCAL/MRCC/RCC_Reg.h:
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Private.h:
 
-../src/MCAL/MRCC/RCC_Private.h:
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Cfg.h:
 
-../src/MCAL/MRCC/RCC_Cfg.h:
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC.h:
 
-../src/MCAL/MRCC/RCC.h:
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Private.h:
+
+E:\ITI\Work_SpaceTourky\Src_Code\Source_code\include\MCAL/MRCC/RCC_Reg.h:

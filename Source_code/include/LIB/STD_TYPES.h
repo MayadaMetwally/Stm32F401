@@ -16,6 +16,8 @@ typedef double f64;
 
 typedef enum{
 	LBTY_OK = 0,
+	LBTY_ErrorInvalidInput,
+    LBTY_ErrorNullPointer,
 	LBTY_NOK
 
 }tenu_ErrorStatus;
