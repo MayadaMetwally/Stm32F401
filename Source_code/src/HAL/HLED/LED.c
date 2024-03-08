@@ -46,6 +46,20 @@ tenu_ErrorStatus HLED_SetStatus(u32 Copy_Led, u8 Copy_status)
 	return Local_ErrorStatus;
 }
 
+tenu_ErrorStatus HLED_Toggle(u32 Copy_Led)
+{
+	tenu_ErrorStatus Local_ErrorStatus=LBTY_OK;
+	if(Copy_Led>_LED_NUM )
+	{
+		Local_ErrorStatus=LBTY_NOK;
+	}
+	else
+	{
+		Local_ErrorStatus=MGPIO_TogglePin(LEDS[Copy_Led].Port,LEDS[Copy_Led].Pin);
+	}
+
+	return Local_ErrorStatus;
+}
 
 tenu_ErrorStatus HLED_GetStatus(u32 Copy_Led, u8 *ADD_status)
 {

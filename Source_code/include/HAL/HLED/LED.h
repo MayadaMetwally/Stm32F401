@@ -34,7 +34,7 @@ typedef struct {
 tenu_ErrorStatus HLED_Init(void);
 tenu_ErrorStatus HLED_SetStatus(u32 Copy_Led, u8 Copy_status);
 tenu_ErrorStatus HLED_GetStatus(u32 Copy_Led, u8 *ADD_status);
-
+tenu_ErrorStatus HLED_Toggle(u32 Copy_Led);
 
 
 #endif /* HAL_HLED_LED_H_ */
