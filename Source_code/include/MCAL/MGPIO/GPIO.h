@@ -111,6 +111,8 @@ tenu_ErrorStatus MGPIO_InitPin(GPIO_Pin_tstr* ADD_PinCfg);
 
 
 tenu_ErrorStatus MGPIO_SetPin(void* Copy_Port, u8 Copy_Pin, u8 Copy_State);
+/************************************Function Toggle the Pin*****************************************/
+tenu_ErrorStatus MGPIO_TogglePin(void* Copy_Port, u8 Copy_Pin);
 
 /************************************Function get the Pin state************************************/
 /**

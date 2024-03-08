@@ -1,0 +1,14 @@
+
+#ifndef MCAL_SYSTICK_STK_CONFIG_H_
+#define MCAL_SYSTICK_STK_CONFIG_H_
+
+/*
+ * OPTIONS:
+ * STK_AHB_DIV_8
+ * STK_AHB
+ */
+#define CLOCK_SOURCE         STK_AHB_DIV_8
+
+
+
+#endif /* MCAL_SYSTICK_STK_CONFIG_H_ */

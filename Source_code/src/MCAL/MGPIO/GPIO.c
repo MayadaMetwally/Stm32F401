@@ -12,6 +12,8 @@
 #include "MGPIO/GPIO_Reg.h"
 #include "MGPIO/GPIO.h"
 
+#define GPIO_BSRR_RESET_OFFSET      0x00000010
+
 /************************************Function Initializes the Pin************************************/
 tenu_ErrorStatus MGPIO_InitPin(GPIO_Pin_tstr* ADD_PinCfg)
 {
@@ -64,12 +66,29 @@ tenu_ErrorStatus MGPIO_SetPin(void* Copy_Port, u8 Copy_Pin, u8 Copy_State)
 		        ((GPIO_Reg*)Copy_Port)->BSRR|=(1<<Copy_Pin);
 		    	 break;
 		    case GPIO_Low:
-		    	((GPIO_Reg*)Copy_Port)->BSRR|=(1<<(Copy_Pin+GPIO_16_PINS));
+		    	((GPIO_Reg*)Copy_Port)->BSRR|=(1<<(Copy_Pin+GPIO_BSRR_RESET_OFFSET));
 		    	break;
 		    default:
 		    	Local_ErrorStatus=LBTY_NOK;
 
 		}
+
+
+	}
+
+	return Local_ErrorStatus;
+}
+/************************************Function Toggle the Pin*****************************************/
+tenu_ErrorStatus MGPIO_TogglePin(void* Copy_Port, u8 Copy_Pin)
+{
+	tenu_ErrorStatus Local_ErrorStatus=LBTY_OK;
+	if (Copy_Port==NULL || Copy_Pin>GPIO_PIN_15)
+	{
+		Local_ErrorStatus=LBTY_NOK;
+	}
+	else
+	{
+		 ((GPIO_Reg*)Copy_Port)->ODR^=(1<<Copy_Pin);
 
 
 	}
