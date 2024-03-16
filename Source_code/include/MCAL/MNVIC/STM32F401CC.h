@@ -1,5 +1,7 @@
 #ifndef STM32F401CC_IRQ_
 #define STM32F401CC_IRQ_
+#include "STD_TYPES.h"
+#define  NVIC_INTERRUPTS_CODE         0xF00000000
 
 /**
  * @brief Enumeration of Interrupt Request (IRQ) IDs for NVIC (Nested Vectored Interrupt Controller).

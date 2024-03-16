@@ -16,8 +16,10 @@
 typedef enum
 {
 	SWITCH_01=0,
-	SWITCH_02=1,
-	SWITCH_03=2,
+	SWITCH_02,
+	SWITCH_03,
+	SWITCH_04,
+	SWITCH_05,
 
 	_NUM_SWITCH
 

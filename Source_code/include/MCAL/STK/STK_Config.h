@@ -4,10 +4,11 @@
 
 /*
  * OPTIONS:
- * STK_AHB_DIV_8
- * STK_AHB
+ * STK_AHB_DIV_8      max timeMS    8000
+ * STK_AHB            max timeMS    1000
  */
-#define CLOCK_SOURCE         STK_AHB_DIV_8
+#define STK_CLOCK_SOURCE         STK_AHB_DIV_8
+#define STK_SYSTEM_CLK           16000000
 
 
 
