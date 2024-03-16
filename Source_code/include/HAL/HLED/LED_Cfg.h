@@ -19,6 +19,8 @@ typedef enum
 	LED_GREEN=0,
 	LED_RED,
 	LED_YELLOW,
+	LED_RED2,
+	LED_GREEN2,
 
 
 	_LED_NUM

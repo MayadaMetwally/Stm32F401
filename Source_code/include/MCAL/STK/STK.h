@@ -18,8 +18,8 @@
 /************************************************Defines*************************************************/
 /********************************************************************************************************/
 
-#define STK_AHB_DIV_8                  0x0
-#define STK_AHB                        0x4
+#define STK_AHB_DIV_8                  STK_SYSTEM_CLK/8
+#define STK_AHB                        STK_SYSTEM_CLK
 /********************************************************************************************************/
 /************************************************Types***************************************************/
 /********************************************************************************************************/
@@ -29,6 +29,8 @@ typedef void (*STK_CBF_t)(void);
 /********************************************************************************************************/
 /************************************************APIs****************************************************/
 /********************************************************************************************************/
+
+tenu_ErrorStatus MSTK_SetSTKCallBack(STK_CBF_t Fptr);
 /**
  * @brief Initialize the SysTick timer.
  *
@@ -36,6 +38,10 @@ typedef void (*STK_CBF_t)(void);
  * It is part of the SysTick timer module initialization.
  */
 void MSTK_Init (void);
+tenu_ErrorStatus MSTK_SetTimerMS (u32 Copy_MSTime);
+tenu_ErrorStatus MSTK_StartTimerMSSingle ();
+tenu_ErrorStatus MSTK_StartTimerMSPeriodic ();
+
 /**
  * @brief Delay for a specified number of ticks using busy-wait.
  *
